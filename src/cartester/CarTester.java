@@ -15,6 +15,9 @@ import java.util.Scanner;
 public class CarTester {
 
     /**
+     * Runs the program.
+     * pre: none
+     * post: three cars are made, and their information is output
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -43,6 +46,7 @@ public class CarTester {
         coolCarLength = sc.nextDouble();
         System.out.println("Please enter the width:");
         coolCarWidth = sc.nextDouble();
+        sc.close();
         
         // print out the information about the cars
         randomCar = new Car();

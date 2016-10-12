@@ -18,12 +18,14 @@ public class Car {
     
     /**
      * Creates a new car with the given parameters as properties.
+     * pre: none
+     * post: a new car is created
      * @param carMake The brand of the car
-     * @param carModel
-     * @param carYear
-     * @param carPrice
-     * @param carLength
-     * @param carWidth 
+     * @param carModel The model of the car
+     * @param carYear The year of the car
+     * @param carPrice The car's price
+     * @param carLength The length of the car
+     * @param carWidth The width of the car
      */
     public Car(String carMake, String carModel, int carYear, double carPrice, double carLength, double carWidth) {
         make = carMake;
@@ -34,23 +36,41 @@ public class Car {
         width = carWidth;
     }
     
+    /**
+     * Creates a new car with the average car's length and width.
+     * pre: none
+     * post: a new car is created
+     * @param carMake The brand of the car
+     * @param carModel The model of the car
+     * @param carYear The year of the car
+     * @param carPrice The car's price
+     */
     public Car(String carMake, String carModel, int carYear, double carPrice) {
         this(carMake, carModel, carYear, carPrice, 3.5, 2);
     }
     
     /**
-     * Default constructor.
+     * Creates a car with unknown brand and model, a random year between 1990 and 2016,
+     * and a price of $20,000.
      * pre: none
-     * post: a new boring car is made
+     * post: a new car is created
      */
     public Car() {
         this("Unknown Brand", "Unknown Model", 1990 + (int)(Math.random()*17), 20000.0);
     }
-    
+    /**
+     * Honks the car's horn.
+     * pre: none
+     * post: "BEEP, BEEP!" output to chat
+     */
     public void honk() {
         System.out.println("BEEP, BEEP!");
     }
     
+    /**
+     * Prints out information describing the car.
+     * @return The year, make, model, length and width, and price of the car
+     */
     @Override
     public String toString() {
         String strRep = "";
